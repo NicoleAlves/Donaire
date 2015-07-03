@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\DPuzzle.cs">
+    <Files>
+      <File FileName="Assets\Resources\Scripts\DPuzzle.cs" Line="21" Column="16" />
+      <File FileName="Assets\Resources\Scripts\Tap.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Player.cs" Line="19" Column="45" />
+      <File FileName="Assets\_Resources\Scripts\Gerenc.cs" Line="7" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

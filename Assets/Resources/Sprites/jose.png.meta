@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: 66c1f207c1cab214fba285945b07938a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: jose_0
+    21300002: jose_1
+    21300004: jose_2
+    21300006: jose_3
+    21300008: jose_4
+    21300010: jose_5
+    21300012: jose_6
+    21300014: jose_7
+    21300016: jose_8
+    21300018: jose_9
+    21300020: jose_10
+    21300022: jose_11
+    21300024: jose_12
+    21300026: jose_13
+    21300028: jose_14
+    21300030: jose_15
+    21300032: jose_16
+    21300034: jose_17
+    21300036: jose_18
+    21300038: jose_19
+    21300040: jose_20
+    21300042: jose_21
+    21300044: jose_22
+    21300046: jose_23
+    21300048: jose_24
+    21300050: jose_25
+    21300052: jose_26
+    21300054: jose_27
+    21300056: jose_28
+    21300058: jose_29
+    21300060: jose_30
+    21300062: jose_31
+    21300064: jose_32
+    21300066: jose_33
+    21300068: jose_34
+    21300070: jose_35
+    21300072: jose_36
+    21300074: jose_37
+    21300076: jose_38
+    21300078: jose_39
+    21300080: jose_40
+    21300082: jose_41
+    21300084: jose_42
+    21300086: jose_43
+    21300088: jose_44
+    21300090: jose_45
+    21300092: jose_46
+    21300094: jose_47
+    21300096: jose_48
+    21300098: jose_49
+    21300100: jose_50
+    21300102: jose_51
+    21300104: jose_52
+    21300106: jose_53
+    21300108: jose_54
+    21300110: jose_55
+    21300112: jose_56
+    21300114: jose_57
+    21300116: jose_58
+    21300118: jose_59
+    21300120: jose_60
+    21300122: jose_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: jose_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 827
+        width: 75
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 827
+        width: 75
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 825
+        width: 69
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_3
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 825
+        width: 70
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_4
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 824
+        width: 55
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_5
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 824
+        width: 55
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 824
+        width: 50
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_7
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 824
+        width: 50
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_8
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 824
+        width: 46
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_9
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 824
+        width: 46
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_10
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 824
+        width: 67
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_11
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 824
+        width: 68
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 687
+        width: 72
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 686
+        width: 72
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_14
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 692
+        width: 69
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_15
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 692
+        width: 70
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_16
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 692
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_17
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 692
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_18
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 687
+        width: 55
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_19
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 687
+        width: 55
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 686
+        width: 46
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_21
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 686
+        width: 45
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_22
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 687
+        width: 52
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_23
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 687
+        width: 51
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 549
+        width: 67
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 550
+        width: 68
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_26
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 555
+        width: 69
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_27
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 555
+        width: 70
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_28
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 555
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_29
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 555
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_30
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 459
+        width: 69
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_31
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 459
+        width: 70
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_32
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 551
+        width: 43
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_33
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 551
+        width: 43
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_34
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 551
+        width: 57
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_35
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 551
+        width: 57
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 433
+        width: 65
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_37
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 433
+        width: 65
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_38
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 447
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_39
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 447
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_40
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 456
+        width: 71
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_41
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 456
+        width: 71
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_42
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 452
+        width: 66
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_43
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 452
+        width: 66
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_44
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 442
+        width: 57
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_45
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 442
+        width: 58
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_46
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 305
+        width: 58
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_47
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 305
+        width: 59
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_48
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 298
+        width: 60
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_49
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 298
+        width: 60
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_50
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 287
+        width: 65
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_51
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 287
+        width: 65
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_52
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 277
+        width: 56
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_53
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 277
+        width: 57
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_54
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 277
+        width: 45
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_55
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 277
+        width: 45
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_56
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 277
+        width: 42
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_57
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 277
+        width: 42
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_58
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 140
+        width: 42
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_59
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 140
+        width: 42
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_60
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 138
+        width: 59
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: jose_61
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 138
+        width: 60
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
