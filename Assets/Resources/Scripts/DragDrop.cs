@@ -4,10 +4,12 @@ using System.Collections;
 public class DragDrop : Default {
     Vector3 startPosition;
     public GameObject match;
-    public bool isTouched = false;
+    public bool wasTouched = false;
     public bool matchAttached = false;
     public bool canMatch;
+    public bool canFollow = false;
     public Vector3 matchedPosition;
+    public Vector3 pointerPos;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -25,9 +27,8 @@ public class DragDrop : Default {
     {
         if (Input.GetButton("Fire1") && !matchAttached)
         {
-            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(new Vector3( p.x,p.y,0));
-            transform.position = new Vector3(worldPoint.x, worldPoint.y, 0);
-            isTouched = true;
+            pointerPos = p; 
+            wasTouched = true;
         }
     }
 
@@ -38,11 +39,18 @@ public class DragDrop : Default {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (wasTouched && Input.GetButton("Fire1") && !matchAttached)
+        {
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = new Vector3(worldPoint.x, worldPoint.y, 0);
+        }
+        else { wasTouched = false; }
+
         if (!matchAttached)
         {
-            isTouched = false;
             base.Update();
-            if (!isTouched) transform.position = startPosition;
+            if (!wasTouched) transform.position = startPosition;
         }
 	}
 }

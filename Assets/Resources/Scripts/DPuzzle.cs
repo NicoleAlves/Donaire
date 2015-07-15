@@ -68,23 +68,16 @@ public class DPuzzle : Default {
                     int n = 0;
                 for (int i = 0; i < Drag.Length;i++)
                 {
-                    if (Drag[i].isTouched) n++;
+                    if (Drag[i].wasTouched) n++;
                 }
                 if(n.Equals(Drag.Length))
                 {
-                    
                     int k = 0;
                     for (int i = 0; i < Drag.Length; i++)
                     {
                         Drag[i].canMatch = true;
                         if (Drag[i].matchAttached) k++;
                     }
-                    if (k.Equals(Drag.Length))
-                    {
-                        Drag[0].match.GetComponent<SpriteRenderer>().sprite = alternativeImg[0];
-                        isSolved = true;
-                    }
-
                 }
                 else
                 {
@@ -93,6 +86,12 @@ public class DPuzzle : Default {
                         Drag[i].canMatch = false;
                     }
                 }
+                int m=0;
+                for (int i = 0; i < Drag.Length; i++)
+                {
+                    if (Drag[i].matchAttached) m++;
+                }
+                if (m.Equals(Drag.Length)) isSolved = true;
                     break;
             case "joao_3":
                     int e = 0;
@@ -137,7 +136,7 @@ public class DPuzzle : Default {
 				n = 0;
 				for (int i = 0; i < Drag.Length;i++)
 				{
-					if (Drag[i].isTouched) n++;
+					if (Drag[i].wasTouched) n++;
 				}
 				if(n.Equals(Drag.Length))
 				{

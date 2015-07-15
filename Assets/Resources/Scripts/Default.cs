@@ -2,7 +2,7 @@
 using System.Collections;
 
 public abstract class Default : MonoBehaviour {
-    public float zVelocity = 9f;
+    float zVelocity = 9f;
     
     public void LookAt2D(Vector3 target)
     {

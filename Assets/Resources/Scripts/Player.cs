@@ -9,6 +9,7 @@ public class Player : Default {
     public static int trys = 1;
     public bool isWalking = true;
     
+    
     public float speed;
 
     void OnTriggerEnter2D(Collider2D col)
@@ -16,6 +17,7 @@ public class Player : Default {
 		if (col.gameObject.tag.Equals("EnterPuzzle")) 
 		{
 			col.gameObject.transform.parent.SendMessage("startPuzzle");
+            FindObjectOfType<CameraFollow>().method = "zoomIn";
 		}
 		if (col.gameObject.tag.Equals("OutPuzzle")) 
 		{
@@ -48,6 +50,12 @@ public class Player : Default {
                 Debug.Log("fssrhsdfhs");
                 Application.LoadLevel(3);
             }
+
+            if(col.gameObject.GetComponent<WayPoint>().Corner)
+            {
+                FindObjectOfType<CameraFollow>().method = "zoomOut";
+            }
+
         }
     }
 
