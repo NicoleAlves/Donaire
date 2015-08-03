@@ -10,3 +10,5 @@ C:\Users\seeduc\Desktop\SBGames_2003_FabieliHelena_NicoleAlves_VictorFernandes\T
 C:\Users\seeduc\Desktop\SBGames_2003_FabieliHelena_NicoleAlves_VictorFernandes\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
 C:\Users\seeduc\Desktop\SBGames_2003_FabieliHelena_NicoleAlves_VictorFernandes\obj\Debug\Assembly-CSharp.dll
 C:\Users\seeduc\Desktop\SBGames_2003_FabieliHelena_NicoleAlves_VictorFernandes\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Victor Fernandes\Desktop\Work\Projetos\SBGames_2003_VictorFernandes\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Victor Fernandes\Desktop\Work\Projetos\SBGames_2003_VictorFernandes\obj\Debug\Assembly-CSharp.dll

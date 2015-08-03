@@ -1,94 +1,84 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Player : Default {
-	public GameObject lastCheckPoint;
-	public GameObject current ;
-	public int nextChoice = 0;
-    public static int trys = 1;
     public bool isWalking = true;
-    
-    
+    public float barPercent;
+    public int paperCount = 0;
+    public int specialPaperCount = 0;
+    public int stars = 0;
     public float speed;
+    public bool isPlaying = true;
 
     void OnTriggerEnter2D(Collider2D col)
     {
+
 		if (col.gameObject.tag.Equals("EnterPuzzle")) 
 		{
 			col.gameObject.transform.parent.SendMessage("startPuzzle");
-            FindObjectOfType<CameraFollow>().method = "zoomIn";
 		}
 		if (col.gameObject.tag.Equals("OutPuzzle")) 
 		{
 			col.gameObject.transform.parent.gameObject.SendMessage("outPuzzle");
-		}
-        if(col.gameObject.tag.Equals("WayPoint") && col.gameObject != lastCheckPoint)
-        {
-            if (col.gameObject.GetComponent<WayPoint>().options.Count > 0)
-            {
-                lastCheckPoint = current;
-                current = col.gameObject.GetComponent<WayPoint>().options[nextChoice];
-                nextChoice = 0;
-            }
-            else if(DPuzzle.actualPlayer.tag.Equals("Joao"))
-            {
-                DPuzzle.actualPlayer = GameObject.FindGameObjectWithTag("Maria");
-                Camera.main.GetComponent<CameraFollow>().target = DPuzzle.actualPlayer.transform;
-                DPuzzle.actualPlayer.GetComponent<Player>().isWalking = true;
-                Player.trys = 2;
-            }
-            else if (DPuzzle.actualPlayer.tag.Equals("Maria"))
-            {
-                DPuzzle.actualPlayer = GameObject.FindGameObjectWithTag("Jose");
-                Camera.main.GetComponent<CameraFollow>().target = DPuzzle.actualPlayer.transform;
-                DPuzzle.actualPlayer.GetComponent<Player>().isWalking = true;
-                Player.trys = 3;
-            }
-            else if (DPuzzle.actualPlayer.tag.Equals("Jose"))
-            {
-                Debug.Log("fssrhsdfhs");
-                Application.LoadLevel(3);
-            }
-
-            if(col.gameObject.GetComponent<WayPoint>().Corner)
-            {
-                FindObjectOfType<CameraFollow>().method = "zoomOut";
-            }
-
         }
+
+        if (col.gameObject.tag.Equals("EndPhase") && isPlaying)
+        {
+            isWalking = false;
+            isPlaying = false;
+            PlayerPrefs.SetString("score", paperCount + ":" + specialPaperCount + ":" + stars);
+            GameObject.FindGameObjectWithTag("fadeObj").GetComponent<Image>().enabled = true;
+            GameObject.FindGameObjectWithTag("fadeObj").GetComponent<Animator>().SetInteger("fadeType", 0);
+        }
+
+        #region Tutorial
+
+        if (col.gameObject.layer.Equals(8) && col.gameObject.tag.Equals("EnterPuzzle") && !col.transform.parent.GetComponent<DPuzzle>().isSolved)
+        {
+            isWalking = false;
+        }
+        else if (col.gameObject.layer.Equals(8) && col.gameObject.tag.Equals("EnterPuzzle") && col.transform.parent.GetComponent<DPuzzle>().isSolved)
+        {
+            col.gameObject.GetComponent<Animator>().enabled = false;
+        }
+
+        #endregion 
+
     }
 
-	void OnTriggerExit2D(Collider2D col)
-	{
-		if (col.gameObject.layer.Equals (10))
-		{
-			isWalking = true;
-		}
-		
-	}
-
-
-	// Use this for initialization
-	void Start () {
-        speed *= 1f / 100f;
-        
-	}
+	// Use this for initializati
 	
 	// Update is called once per frame
 	public override void Update () 
     {
         base.Update();
-        
+        starBarUpdate();
         if (isWalking)
         {
-            GetComponent<Animator>().enabled = true;
-            LookAt2D(current.transform.position);
-            transform.position = Vector3.MoveTowards(transform.position, current.transform.position, speed);
+            transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+            GetComponent<Animator>().SetBool("isWalking", true);
         }
         else
-        {
-            GetComponent<Animator>().enabled = false;
-        }
+        GetComponent<Animator>().SetBool("isWalking", false);
+
 	}
+
+    public void starBarUpdate()
+    {
+        DPuzzle[] total = FindObjectsOfType<DPuzzle>();
+        float j = 0;
+        for(float i = 0;i<total.Length;i++)
+        {
+            if (total[(int)i].isSolved) j++;
+        }
+        stars = (int)j;
+        barPercent = (j / total.Length);
+        float actual = GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount;
+        if (barPercent != GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount)
+            GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount = barPercent;
+    }
+
+
 }

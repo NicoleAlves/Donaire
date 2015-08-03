@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraFollow : Default
 {
-    public string method = "";
+    /*public string method = "";
     public float dampTime = 0.15f;
     private Vector3 velocity = Vector3.zero;
     public Transform target;
@@ -29,7 +29,7 @@ public class CameraFollow : Default
             transform.position = Vector3.MoveTowards(transform.localPosition , t, 2f);
             Vector3 delta = target.position - camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
             Vector3 destination = transform.position + (delta);
-            transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);*/
+            transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
 
             switch(method)
             {
@@ -67,6 +67,6 @@ public class CameraFollow : Default
         transform.rotation = DPuzzle.actualPlayer.transform.rotation;
         transform.position = Vector3.MoveTowards(transform.position, newTarget, 1f);
 
-    }
+    }*/
 
 }

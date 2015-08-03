@@ -4,39 +4,18 @@ using System.Collections;
 public class DPuzzle : Default {
     public bool isSolved = false;
     public bool canCall = false;
-    public static GameObject actualPlayer;
     public string puzzle;
-    public int clickLimit;
-    public Collider2D trigger;
-    public Tap[] Tap;
-    public Cleaner[] Cleaner;
     public DragDrop[] Drag;
-    public Sprite[] alternativeImg;
+    public Animator fAnim;
+    public Sprite[] aImg;
+    public Animator iAnim;
 
     void startPuzzle()
     {
         canCall = true;
     }
 
-	void outPuzzle()
-	{
-        if (!isSolved && Player.trys > 0)
-        {
-            Player.trys--;
-            actualPlayer.transform.position = actualPlayer.GetComponent<Player>().lastCheckPoint.transform.position;
-        }
-        else if (Player.trys <= 0 && !isSolved)
-        {
-            Application.LoadLevel("GameOver");
-        }
-        
-	}
-
-	// Use this for initialization
-	void Start () 
-    {
-        actualPlayer = GameObject.FindGameObjectWithTag("Joao");
-	}
+    void outPuzzle() { }
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,23 +27,31 @@ public class DPuzzle : Default {
         {
             #region Joao
             case "joao_1":
-                int j = 0;
-                for (int i = 0; i < Tap.Length;i++){
-					if(Tap[i].clickTimes >= clickLimit && Tap[i].canClick) {
-                        Tap[i].canClick = false;
-                        Tap[i].gameObject.transform.localScale -= new Vector3(0.5f * Tap[i].gameObject.transform.localScale.x,
-                            0.5f * Tap[i].gameObject.transform.localScale.y, 0);
-						Tap[i].gameObject.GetComponent<SpriteRenderer>().sprite = alternativeImg[i];
-					}
-                    if (Tap[i].clickTimes >= clickLimit)
+                int e = 0;
+                    for (int i = 0; i < Drag.Length;i++ )
                     {
-                        j++;
+                        if (Drag[i].matchAttached) e++;
                     }
-				}
-                if (j == Tap.Length) isSolved = true;
-                    break;
+                    if (e.Equals(Drag.Length))
+                    {
+                        Animator a = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
+                        a.SetInteger("tutorialType", 2);
+                        a.enabled = false;
+                        Destroy(transform.FindChild("Grandma").FindChild("Lightning").gameObject);
+                        Destroy(transform.FindChild("Grandma").FindChild("Lightning1").gameObject);
+                        Destroy(transform.FindChild("Grandma").FindChild("Lightning2").gameObject);
+                        Destroy(transform.FindChild("EnterPuzzle").transform.FindChild("hand").gameObject);
+                        iAnim.enabled = false;
+                        fAnim.SetBool("isSolved", true);
+                        isSolved = true;
+                        FindObjectOfType<Player>().isWalking = true;
+                        }
+                break;
+
 
             case "joao_2"://drag All
+                //Animator g = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
+                //        g.SetInteger("tutorialType", 2);
                     int n = 0;
                 for (int i = 0; i < Drag.Length;i++)
                 {
@@ -91,23 +78,53 @@ public class DPuzzle : Default {
                 {
                     if (Drag[i].matchAttached) m++;
                 }
-                if (m.Equals(Drag.Length)) isSolved = true;
+                if (m.Equals(Drag.Length))
+                {
+                    FindObjectOfType<Player>().isWalking = true;
+                    fAnim.SetBool("isSolved", true);
+                    Animator a = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
+                    a.SetInteger("tutorialType", 3);
+                    a.enabled = false;
+                    Drag[0].match.GetComponent<SpriteRenderer>().sprite = aImg[0];
+                    Destroy(transform.FindChild("EnterPuzzle").transform.FindChild("hand").gameObject);
+                    isSolved = true;
+                }
                     break;
             case "joao_3":
-                    int e = 0;
-                    for (int i = 0; i < Drag.Length;i++ )
+                //Animator x = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
+                //        x.SetInteger("tutorialType", 3);
+                    if (FindObjectOfType<Player>().paperCount > 0)
                     {
-                        if (Drag[i].matchAttached) e++;
+                        FindObjectOfType<Player>().isWalking = true;
+                        transform.FindChild("EnterPuzzle").GetComponent<Animator>().enabled = false;
+                        Destroy(transform.FindChild("EnterPuzzle").transform.FindChild("hand").gameObject);
+                        fAnim.SetBool("isSolved", true);
+                        isSolved = true;
                     }
-                    if (e.Equals(Drag.Length)) isSolved = true;
 
                         break;
 			case "joao_4":
-				if(Drag[0].matchAttached)isSolved = true;
+                        if (Drag[0].matchAttached)
+                        {
+                            isSolved = true;
+                            fAnim.SetBool("isSolved", true);
+                        }
 				break;
-			case "joao_5":
-				if(!Cleaner[0].isVisible)isSolved = true;
-				break;
+
+            case "joao_5":
+                int o = 0;
+                for (int i = 0; i < Drag.Length;i++)
+                {
+                    if (Drag[i].matchAttached) o++;
+
+                }
+                if (o.Equals(Drag.Length))
+                {
+                    fAnim.SetBool("isSolved", true);
+                    isSolved = true;
+                }
+                break;
+
             #endregion
 
             #region Maria 
@@ -118,44 +135,6 @@ public class DPuzzle : Default {
 					if (Drag[i].matchAttached) z++;
 				}
 				if (z.Equals(Drag.Length)) isSolved = true;
-				break;
-
-			case "maria_2":
-				for (int i = 0; i < Tap.Length;i++){
-					if(Tap[i].clickTimes >= clickLimit)
-					{
-                        if (Tap[i].gameObject.name.Equals("balãoBom"))
-                        {
-                            isSolved = true;
-                        }
-						//Adicionar codigo para mudar a imagem da moça.
-					}
-				}
-				break;
-			case "maria_3":
-				n = 0;
-				for (int i = 0; i < Drag.Length;i++)
-				{
-					if (Drag[i].wasTouched) n++;
-				}
-				if(n.Equals(Drag.Length))
-				{
-					int k = 0;
-					for (int i = 0; i < Drag.Length; i++)
-					{
-						Drag[i].canMatch = true;
-						if (Drag[i].matchAttached) k++;
-					}
-					if (k.Equals(Drag.Length) && Tap[0].clickTimes >= clickLimit) isSolved = true;
-					
-				}
-				else
-				{
-					for (int i = 0; i < Drag.Length; i++)
-					{
-						Drag[i].canMatch = false;
-					}
-				}
 				break;
 			case "maria_4":
 				n = 0;
@@ -198,16 +177,6 @@ public class DPuzzle : Default {
 				}
 				if(n.Equals(Drag.Length))isSolved = true;
 				break;
-			case "jose_2":
-				if(Tap[0].clickTimes >= clickLimit)
-				{
-					isSolved = true;
-				}
-				break;
-			case "jose_3":
-                if (Tap[0].clickTimes >= clickLimit) isSolved = true;
-				
-				break;
 			case "jose_4":
 				n = 0;
 				for (int i = 0; i < Drag.Length;i++){
@@ -228,28 +197,6 @@ public class DPuzzle : Default {
 					}
 				}
 				if(n.Equals(Drag.Length))isSolved = true;
-				break;
-			case "jose_6":
-				if(Tap[0].clickTimes >= clickLimit)
-				{
-					isSolved = true;
-				}
-				break;
-			case "jose_7":
-				if(!Cleaner[0].isVisible)isSolved = true;
-				break;
-			case "jose_8":
-                if (Tap[0].clickTimes >= clickLimit)
-                {
-                    isSolved = true;
-                }
-				break;
-			case "jose_9":
-                if (Tap[0].clickTimes >= clickLimit)
-                {
-                    isSolved = true;
-                    Tap[0].gameObject.transform.position = new Vector3(6.58f, -1.35f, 0);
-                }
 				break;
             #endregion
 

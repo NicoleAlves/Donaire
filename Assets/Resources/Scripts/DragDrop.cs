@@ -9,12 +9,11 @@ public class DragDrop : Default {
     public bool canMatch;
     public bool canFollow = false;
     public Vector3 matchedPosition;
-    public Vector3 pointerPos;
+    Vector3 pointerPos;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
-        if(col.gameObject.Equals(match) && canMatch && !matchAttached)
+        if(col.gameObject.name.Equals(match.name) && canMatch && !matchAttached)
         {
             matchAttached = true;
             transform.localPosition = matchedPosition;
