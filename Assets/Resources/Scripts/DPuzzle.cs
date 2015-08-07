@@ -50,8 +50,8 @@ public class DPuzzle : Default {
 
 
             case "joao_2"://drag All
-                //Animator g = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
-                //        g.SetInteger("tutorialType", 2);
+                Animator g = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
+                       g.SetInteger("tutorialType", 2);
                     int n = 0;
                 for (int i = 0; i < Drag.Length;i++)
                 {
@@ -91,8 +91,8 @@ public class DPuzzle : Default {
                 }
                     break;
             case "joao_3":
-                //Animator x = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
-                //        x.SetInteger("tutorialType", 3);
+               Animator x = transform.FindChild("EnterPuzzle").GetComponent<Animator>();
+                       x.SetInteger("tutorialType", 3);
                     if (FindObjectOfType<Player>().paperCount > 0)
                     {
                         FindObjectOfType<Player>().isWalking = true;
