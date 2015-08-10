@@ -14,18 +14,16 @@ public class DPuzzle : Default {
     {
         canCall = true;
     }
-
     void outPuzzle() { }
-	
 	// Update is called once per frame
-	void Update () {
-        
-	if(!isSolved && canCall)
+	void Update () 
     {
-		
-        switch(puzzle)
+	    if(!isSolved && canCall)
         {
-            #region Joao
+	    	
+            switch(puzzle)
+            {
+                #region Joao
             case "joao_1":
                 int e = 0;
                     for (int i = 0; i < Drag.Length;i++ )
@@ -126,82 +124,9 @@ public class DPuzzle : Default {
                 break;
 
             #endregion
-
-            #region Maria 
-			case "maria_1":
-				int z = 0;
-				for (int i = 0; i < Drag.Length; i++)
-				{
-					if (Drag[i].matchAttached) z++;
-				}
-				if (z.Equals(Drag.Length)) isSolved = true;
-				break;
-			case "maria_4":
-				n = 0;
-				for (int i = 0; i < Drag.Length;i++){
-					if(Drag[i].matchAttached)
-					{
-						n++;
-					}
-				}
-				if(n.Equals(Drag.Length))isSolved = true;
-				break;
-			case "maria_5":
-				if(Drag[0].matchAttached)isSolved=true;
-				break;
-			case "maria_6":
-				n = 0;
-				for (int i = 0; i < Drag.Length;i++){
-					if(Drag[i].matchAttached)
-					{
-						n++;
-					}
-
-				}
-				if(n.Equals(Drag.Length))isSolved = true;
-				break;
-			case "maria_7":
-				if(Drag[0].matchAttached)isSolved=true;
-				break;
-
-            #endregion
-
-            #region Jose
-			case "jose_1":
-				n = 0;
-				for (int i = 0; i < Drag.Length;i++){
-					if(Drag[i].matchAttached)
-					{
-						n++;
-					}
-				}
-				if(n.Equals(Drag.Length))isSolved = true;
-				break;
-			case "jose_4":
-				n = 0;
-				for (int i = 0; i < Drag.Length;i++){
-					if(Drag[i].matchAttached)
-					{
-                        Drag[i].gameObject.GetComponent<SpriteRenderer>().enabled = false;
-						n++;
-					}
-				}
-				if(n.Equals(Drag.Length))isSolved = true;
-				break;
-			case "jose_5":
-				n = 0;
-				for (int i = 0; i < Drag.Length;i++){
-					if(Drag[i].matchAttached)
-					{
-						n++;
-					}
-				}
-				if(n.Equals(Drag.Length))isSolved = true;
-				break;
-            #endregion
+            }
 
         }
 
-    }
 	}
 }

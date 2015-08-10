@@ -19,20 +19,20 @@ public class Player : Default {
 		{
 			col.gameObject.transform.parent.SendMessage("startPuzzle");
 		}
-		if (col.gameObject.tag.Equals("OutPuzzle")) 
+		/*if (col.gameObject.tag.Equals("OutPuzzle")) 
 		{
 			col.gameObject.transform.parent.gameObject.SendMessage("outPuzzle");
-        }
-
+        }*/
         if (col.gameObject.tag.Equals("EndPhase") && isPlaying)
         {
             isWalking = false;
             isPlaying = false;
             PlayerPrefs.SetString("score", paperCount + ":" + specialPaperCount + ":" + stars);
-            GameObject.FindGameObjectWithTag("fadeObj").GetComponent<Image>().enabled = true;
-            GameObject.FindGameObjectWithTag("fadeObj").GetComponent<Animator>().SetInteger("fadeType", 0);
+            for (int i = 0; i < FindObjectsOfType<CanvasGroup>().Length; i++)
+            {
+                FindObjectsOfType<CanvasGroup>()[i].GetComponent<MenuController>().selectButton(4);
+            }
         }
-
         #region Tutorial
 
         if (col.gameObject.layer.Equals(8) && col.gameObject.tag.Equals("EnterPuzzle") && !col.transform.parent.GetComponent<DPuzzle>().isSolved)
@@ -47,10 +47,6 @@ public class Player : Default {
         #endregion 
 
     }
-
-	// Use this for initializati
-	
-	// Update is called once per frame
 	public override void Update () 
     {
         base.Update();
@@ -62,23 +58,24 @@ public class Player : Default {
         }
         else
         GetComponent<Animator>().SetBool("isWalking", false);
-
 	}
 
     public void starBarUpdate()
     {
-        DPuzzle[] total = FindObjectsOfType<DPuzzle>();
-        float j = 0;
-        for(float i = 0;i<total.Length;i++)
+        try
         {
-            if (total[(int)i].isSolved) j++;
+            DPuzzle[] total = FindObjectsOfType<DPuzzle>();
+            float j = 0;
+            for (float i = 0; i < total.Length; i++)
+            {
+                if (total[(int)i].isSolved) j++;
+            }
+            stars = (int)j;
+            barPercent = (j / total.Length);
+            float actual = GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount;
+            if (barPercent != GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount)
+                GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount = barPercent;
         }
-        stars = (int)j;
-        barPercent = (j / total.Length);
-        float actual = GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount;
-        if (barPercent != GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount)
-            GameObject.FindGameObjectWithTag("starBars").GetComponent<Image>().fillAmount = barPercent;
+        catch { }
     }
-
-
 }

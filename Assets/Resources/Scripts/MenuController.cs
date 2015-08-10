@@ -6,22 +6,18 @@ public class MenuController : MonoBehaviour
 {
     public RectTransform[] positions;
     public RectTransform playerRect;
-    public int actualIndexer = 0; 
+    public int actualIndexer = 0;
 
-    void Start()
+    public void LoadNextLevel(int i)
     {
-        GetComponent<Animator>().SetInteger("fadeType", 1 );
+        StartCoroutine(LevelLoad(i));
     }
 
-    public void enterScene()
+    //load level after one second delay
+    IEnumerator LevelLoad(int i)
     {
-        GetComponent<Animator>().SetInteger("fadeType", 2);
-        GetComponent<Image>().enabled = false;
-    }
-        
-    public void outScene()
-    {
-        Application.LoadLevel(actualIndexer);
+        yield return new WaitForSeconds(1f);
+        Application.LoadLevel(i);
     }
 
     public void selectButton(int i)
@@ -29,12 +25,13 @@ public class MenuController : MonoBehaviour
         if (actualIndexer != i)
         {
             actualIndexer = i;
-            playerRect.position = new Vector2(positions[actualIndexer].position.x, playerRect.position.y);
+            if(positions.Length != 0)playerRect.position = new Vector2(positions[actualIndexer].position.x, playerRect.position.y);
         }
-        else 
+        else
         {
-            GameObject.FindGameObjectWithTag("fadeObj").GetComponent<Image>().enabled = true;
-            GameObject.FindGameObjectWithTag("fadeObj").GetComponent<Animator>().SetInteger("fadeType", 0);
+            GetComponent<Animator>().Play("PanelFadeOut");
+            LoadNextLevel(actualIndexer);
         }
     }
+
 }

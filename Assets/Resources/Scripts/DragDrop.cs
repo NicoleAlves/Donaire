@@ -22,24 +22,36 @@ public class DragDrop : Default {
     }
 	
 
-    public override void OnTouch(Touch t, Vector3 p)
+    public override void OnTouch(object t)
     {
-        if (Input.GetButton("Fire1") && !matchAttached)
+        if(t is Touch)
         {
-            pointerPos = p; 
-            wasTouched = true;
+            if ( !matchAttached)
+            {
+                pointerPos = ((Touch)t).position; 
+                wasTouched = true;
+            }
+        }
+        else if (t is Vector3)
+        {
+            if (Input.GetButton("Fire1") &&  !matchAttached)
+            {
+                pointerPos = ((Vector3)t);
+                wasTouched = true;
+            }
         }
     }
-
-	// Use this for initialization
 	void Start () {
        startPosition =  transform.position;
 	}
-	
-	// Update is called once per frame
 	void Update () {
 
-        if (wasTouched && Input.GetButton("Fire1") && !matchAttached)
+        if (Input.touchSupported && Input.GetTouch(0).position != null)
+        {
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            transform.position = new Vector3(worldPoint.x, worldPoint.y, 0);
+        }
+        else if (wasTouched && Input.GetButton("Fire1") && !matchAttached)
         {
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(worldPoint.x, worldPoint.y, 0);

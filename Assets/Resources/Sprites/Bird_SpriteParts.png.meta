@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: b69d27aecf42e6e45bdec4f452c05832
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bird_Body
+    21300002: Bird_SpriteParts_1
+    21300004: Bird_Wing
+    21300006: Bird_Beak
+    21300008: Bird_Left
+    21300010: Bird_Right
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Bird_Body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 183
+        width: 593
+        height: 391
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bird_SpriteParts_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 271
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bird_Wing
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 8
+        width: 198
+        height: 161
+      alignment: 9
+      pivot: {x: .0378007777, y: .81057936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bird_Beak
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 73
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bird_Left
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 24
+        width: 65
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bird_Right
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 24
+        width: 60
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

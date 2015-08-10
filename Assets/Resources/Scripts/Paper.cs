@@ -11,6 +11,7 @@ public class Paper : MonoBehaviour {
         string t = GameObject.FindGameObjectWithTag("Paper_Text").GetComponent<Text>().text;
         GameObject.FindGameObjectWithTag("Paper_Text").GetComponent<Text>().text = FindObjectOfType<Player>().paperCount.ToString();
         Destroy(gameObject);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().Play();
     }
 
 	// Use this for initialization
